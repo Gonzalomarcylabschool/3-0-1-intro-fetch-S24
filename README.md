@@ -27,7 +27,7 @@ A web application's most common asynchronous operation is requesting data from a
 - User can generate random pictures of dogs on the internet.
   - My application can request those images from the [dog api](https://dog.ceo/dog-api/)
 
-> This is an example of user stories and criteria for success.
+> This is an example of user stories and criteria for success. More on that later. If you need to know now [check this out](https://www.atlassian.com/agile/project-management/user-stories) (
 
 ## HTTP Request / Response Cycle
 
