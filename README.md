@@ -20,9 +20,14 @@ Okay now we’re really getting somewhere. So far we’ve been writing programs 
 
 A web application's most common asynchronous operation is requesting data from another computer. For example:
 
-- I want my web application to show the current weather. I can request that data from a Weather API.
-- I want my web application to show a Google map. I can request that map from the Google Maps API
-- I want my web application to find random pictures of dogs on the internet. I can request those images from the [dog api](https://dog.ceo/dog-api/)
+- User can see the current weather.
+  - My application can request that data from a Weather API.
+- User can use a Google map.
+  - My application can request that map from the Google Maps API
+- User can generate random pictures of dogs on the internet.
+  - My application can request those images from the [dog api](https://dog.ceo/dog-api/)
+
+> This is an example of user stories and criteria for success.
 
 ## HTTP Request / Response Cycle
 
@@ -232,10 +237,10 @@ The default behavior of using `fetch` is to make a `GET` request, but we can als
 
 ```jsx
 const newUser = { name: "morpheus", job: "leader" };
-
-const options = {
-  method: "POST",                      // The type of HTTP request
-  body: JSON.stringify(newUser),       // The data to be sent to the API
+const updateUser = {name: "neo", job: "leader"}
+const postOptions = {
+  method: "PATCH",                      // The type of HTTP request
+  body: JSON.stringify(updateUser),       // The data to be sent to the API
   headers: {
     "Content-Type": "application/json" // The format of the body's data
   }  
@@ -245,7 +250,7 @@ const options = {
 const url = 'https://reqres.in/api/users';
 
 // Notice that the options object is provided as the second arg
-fetch(url, options)
+fetch(url, postOption)
   .then((response) => {
     if (!response.ok) {
       return console.log(`Fetch failed. ${response.status} ${response.statusText}`)

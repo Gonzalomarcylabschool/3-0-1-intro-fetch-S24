@@ -1,5 +1,4 @@
-import './style.css'
-import { fetchNewDog } from './js/event-handlers';
+import { fetchNewDog } from './js/event-handlers.js';
 
 const main = () => {
   document
