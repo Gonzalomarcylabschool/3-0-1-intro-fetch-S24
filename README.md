@@ -238,7 +238,7 @@ The default behavior of using `fetch` is to make a `GET` request, but we can als
 ```jsx
 const newUser = { name: "morpheus", job: "leader" };
 const updateUser = {name: "neo", job: "leader"}
-const postOptions = {
+const postOption = {
   method: "POST",                      // The type of HTTP request
   body: JSON.stringify(newUser),       // The data to be sent to the API
   headers: {
