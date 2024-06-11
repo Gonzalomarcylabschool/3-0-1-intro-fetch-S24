@@ -239,8 +239,8 @@ The default behavior of using `fetch` is to make a `GET` request, but we can als
 const newUser = { name: "morpheus", job: "leader" };
 const updateUser = {name: "neo", job: "leader"}
 const postOptions = {
-  method: "PATCH",                      // The type of HTTP request
-  body: JSON.stringify(updateUser),       // The data to be sent to the API
+  method: "POST",                      // The type of HTTP request
+  body: JSON.stringify(newUser),       // The data to be sent to the API
   headers: {
     "Content-Type": "application/json" // The format of the body's data
   }  
